@@ -26,6 +26,8 @@ The data files are too large to be uploaded to the repo. After your access to th
 
 ## Implementation Workflow
 
+Check and modify the path in ```sys.path.append('/usr/local/data/elisejzh/Projects/RLMSAD')``` according to your path settings for related scripts.
+
 ### 1. Data Preprocessing
 These functions are already incorporated into a pre-defined module "data_process.py". There is no need to run this it individually as it will be loaded into and run by other scripts.
 ### 2. Pretrain Base Detectors
@@ -70,6 +72,9 @@ Run the following scripts for evaluating the base models.
  ```$ python base_detectors/sklearn_models/eval_iForest.py```
  
  ```$ python base_detectors/USAD/eval_usad.py```
+ 
+ You can vary the model threshold by changing the contamination rate ```contamination``` in function ```raw_thredholds(raw_scores, contamination)``` to tune the base model performance. 
+ 
 
 In case you would like to explore the performance of a simple emsemble learning scheme. I also provide the script for majority voting:
 
@@ -77,7 +82,11 @@ In case you would like to explore the performance of a simple emsemble learning 
 
 ### 3. Run RL Model Selector
 
-To change the reward setting in gym environment, go to ```RL_settings/env.py```. To change the RL algorithm for training the policy, go to ```RL_settings/run_RLMS_offline.py``` to load a different algorithm from stable-baselines3 package.
+To change the reward setting in gym environment, go to ```RL_settings/env.py```. 
+
+To change the RL algorithm for training the policy, go to ```RL_settings/run_RLMS_offline.py``` to load a different algorithm from stable-baselines3 package. 
+
+Set the threshold for each base detector in script ```RL_settings/run_RLMS_offline.py``` (ideally based on your tuning results on the pretrained models).
 
 To train the policy, execute the following command in terminal:
 
