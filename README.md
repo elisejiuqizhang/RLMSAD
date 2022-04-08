@@ -41,9 +41,18 @@ The five candidate base anomaly detectors include
 ECOD and COPOD are from the pyod package. SGD one-class SVM (OSVM) and Isolation Forest (iForest) are from sklearn. USAD implementation are from the authors' orginal repository.
 
 #### 2.1 To pretrain each base detector and save the model as '.sav' file using pickle
-Set current directory to the root of master branch of RLMSAD: 
+From terminal. set the current working directory to the root of master branch of RLMSAD: 
   <pre><code>$ cd RLMSAD
 </code></pre>
+
+Pretrain and save each model:
+  <pre><code>$ python base_detectors/PyOD_models/ECOD_train.py
+  $ python base_detectors/PyOD_models/COPOD_train.py
+  $ python base_detectors/sklearn_models/OSVM_train.py
+  $ python base_detectors/sklearn_models/iForest_train.py
+</code></pre>
+
+#### 2.2 
 
 
 ### 3. Run RL Model Selector
