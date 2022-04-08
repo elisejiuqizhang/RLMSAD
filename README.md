@@ -1,5 +1,5 @@
-# RLMSAD
-Reinforcement Learning-Based Model Selection for Anomaly Detection (RLMSAD)
+# RLMSAD: Reinforcement Learning-Based Model Selection for Anomaly Detection
+This is the implementation for Reinforcement Learning-Based Model Selection for Anomaly Detection (RLMSAD).
 
 ## Requirements
  * python 3.7.11
@@ -24,3 +24,8 @@ SWaT datasets is collected by “iTrust, Centre for Research in Cyber Security, 
 ### Dataset Usage
 The data files are too large to be uploaded to the repo. After your access to the datasets has been approved, you should create a folder "raw_input/SWaT" under the master branch, then download the corresponding CSV files into it. (What I was using when testing was the Attack_v0 and Normal_v1 under "SWaT A1&A2 Dec 2015 - Physical")
 
+## Implementation Workflow
+
+### 1. Data Preprocessing
+### 2. Pretrain Base Detectors
+### 3. Run RL Model Selector
