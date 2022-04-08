@@ -42,7 +42,7 @@ ECOD and COPOD are from the pyod package. SGD one-class SVM (OSVM) and Isolation
 
 #### 2.1 To pretrain each base detector and save the model as '.sav' file using pickle
 From terminal. set the current working directory to the root of master branch of RLMSAD: 
-  <pre><code>$ cd RLMSAD
+  <pre><code>$ cd RLMSAD<pre><code> 
 
 Pretrain and save each model:
   <pre><code> $ python base_detectors/PyOD_models/ECOD_train.py
