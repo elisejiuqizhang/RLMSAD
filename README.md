@@ -22,7 +22,7 @@ SWaT datasets is collected by “iTrust, Centre for Research in Cyber Security, 
 * SWaT dataset: https://itrust.sutd.edu.sg/itrust-labs_datasets/dataset_info/#swat
 
 ### Dataset Usage
-The data files are too large to be uploaded to the repo. After your access to the datasets has been approved, you should create a folder "raw_input/SWaT" under the master branch, then download the corresponding CSV files into it. (What I was using when testing was the Attack_v0 and Normal_v1 under "SWaT A1&A2 Dec 2015 - Physical")
+The data files are too large to be uploaded to the repo. After your access to the datasets has been approved, you should create a folder ```raw_input/SWaT``` under the master branch, then download the corresponding CSV files into it. (What I was using when testing was the Attack_v0 and Normal_v1 under "SWaT A1&A2 Dec 2015 - Physical")
 
 ## Implementation Workflow
 
@@ -54,6 +54,8 @@ Pretrain and save each model on training data:
  ```$ python base_detectors/sklearn_models/OSVM_train.py```
  
  ```$ python base_detectors/sklearn_models/iForest_train.py```
+ 
+ ```$ python base_detectors/USAD/usad_train.py```
 
 #### 2.2 Run the pretrained model on test data:
 The pretrained models will be saved under the root of master branch after executing the above training scripts.
@@ -64,8 +66,19 @@ Run the following scripts for evaluating the base models.
  ```$ python base_detectors/PyOD_models/eval_COPOD.py```
  
  ```$ python base_detectors/sklearn_models/eval_OSVM.py```
- 
- ```$ python base_detectors/sklearn_models/eval_iForest.py```
 
+ ```$ python base_detectors/sklearn_models/eval_iForest.py```
+ 
+ ```$ python base_detectors/USAD/eval_usad.py```
+
+In case you would like to explore the performance of a simple emsemble learning scheme. I also provide the script for majority voting:
+
+``` $ python base_detectors/run_majority+vote.py```
 
 ### 3. Run RL Model Selector
+
+To change the reward setting in gym environment, go to ```RL_settings/env.py```. To change the RL algorithm for training the policy, go to ```RL_settings/run_RLMS_offline.py``` to load a different algorithm from stable-baselines3 package.
+
+To train the policy, execute the following command in terminal:
+
+```$ python RL_settings/run_RLMS_offline.py```
