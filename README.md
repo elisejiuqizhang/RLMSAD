@@ -27,5 +27,14 @@ The data files are too large to be uploaded to the repo. After your access to th
 ## Implementation Workflow
 
 ### 1. Data Preprocessing
+These functions are already incorporated into a pre-defined module "data_process.py". There is no need to run this it individually as it will be loaded into and run by other scripts.
 ### 2. Pretrain Base Detectors
+The five candidate base anomaly detectors include
+| Base Models                                                                            	| Paper Source                                                                                   	| Implementations                       	|
+|----------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------------	|---------------------------------------	|
+| ECOD: Unsupervised Outlier Detection Using Empirical Cumulative Distribution Functions 	| https://arxiv.org/abs/2201.00382                                                               	| https://github.com/yzhao062/pyod      	|
+| COPOD: Copula-Based Outlier Detection                                                  	| https://arxiv.org/abs/2009.09463                                                               	| https://github.com/yzhao062/pyod      	|
+| One-Class Support Vector Machine (SVM)                                                 	| https://www.jmlr.org/papers/v12/pedregosa11a.html                                              	| sklearn.linear_model.SGDOneClassSVM() 	|
+| Isolation Forest (iForest)                                                             	| https://ieeexplore.ieee.org/document/4781136 https://www.jmlr.org/papers/v12/pedregosa11a.html 	| sklearn.ensemble.IsolationForest()    	|
+| USAD: UnSupervised Anomaly Detection on Multivariate Time Series                       	| https://dl.acm.org/doi/10.1145/3394486.3403392                                                 	| https://github.com/manigalati/usad    	|
 ### 3. Run RL Model Selector
