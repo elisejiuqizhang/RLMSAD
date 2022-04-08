@@ -37,4 +37,10 @@ The five candidate base anomaly detectors include
 | One-Class Support Vector Machine (SVM)                                                 	| https://www.jmlr.org/papers/v12/pedregosa11a.html                                              	| sklearn.linear_model.SGDOneClassSVM() 	|
 | Isolation Forest (iForest)                                                             	| https://ieeexplore.ieee.org/document/4781136 https://www.jmlr.org/papers/v12/pedregosa11a.html 	| sklearn.ensemble.IsolationForest()    	|
 | USAD: UnSupervised Anomaly Detection on Multivariate Time Series                       	| https://dl.acm.org/doi/10.1145/3394486.3403392                                                 	| https://github.com/manigalati/usad    	|
+
+ECOD and COPOD are from the pyod package. SGD one-class SVM (OSVM) and Isolation Forest (iForest) are from sklearn. USAD implementation are from the authors' orginal repository.
+
+
+
+
 ### 3. Run RL Model Selector
