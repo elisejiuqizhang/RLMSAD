@@ -45,11 +45,6 @@ From terminal. set the current working directory to the root of master branch of
   <pre><code>$ cd RLMSAD<pre><code> 
 
 Pretrain and save each model:
-  <pre><code> $ python base_detectors/PyOD_models/ECOD_train.py
-  $ python base_detectors/PyOD_models/COPOD_train.py
-  $ python base_detectors/sklearn_models/OSVM_train.py
-  $ python base_detectors/sklearn_models/iForest_train.py
-  </code></pre>
 
 #### 2.2 
 
