@@ -45,7 +45,7 @@ From terminal. set the current working directory to the root of master branch of
 
   ```$ cd RLMSAD```
 
-Pretrain and save each model:
+Pretrain and save each model on training data:
 
  ```$ python base_detectors/PyOD_models/ECOD_train.py```
  
@@ -55,7 +55,17 @@ Pretrain and save each model:
  
  ```$ python base_detectors/sklearn_models/iForest_train.py```
 
-#### 2.2 
+#### 2.2 Run the pretrained model on test data:
+The pretrained models will be saved under the root of master branch after executing the above training scripts.
+Run the following scripts for evaluating the base models.
+
+ ```$ python base_detectors/PyOD_models/eval_ECOD.py```
+ 
+ ```$ python base_detectors/PyOD_models/eval_COPOD.py```
+ 
+ ```$ python base_detectors/sklearn_models/eval_OSVM.py```
+ 
+ ```$ python base_detectors/sklearn_models/eval_iForest.py```
 
 
 ### 3. Run RL Model Selector
