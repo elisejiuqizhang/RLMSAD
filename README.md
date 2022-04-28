@@ -29,7 +29,7 @@ The data files are too large to be uploaded to the repo. After your access to th
 Check and modify the path in ```sys.path.append('/usr/local/data/elisejzh/Projects/RLMSAD')``` according to your path settings for related scripts.
 
 ### 1. Data Preprocessing
-These functions are already incorporated into a pre-defined module "data_process.py". There is no need to run this it individually as it will be loaded into and run by other scripts.
+These functions are already incorporated into a pre-defined module "data_process.py". (There is no need to run it individually as it will be loaded into and run by other scripts.)
 ### 2. Pretrain Base Detectors
 The five candidate base anomaly detectors include
 | Base Models                                                                            	| Paper Source                                                                                   	| Implementations                       	|
