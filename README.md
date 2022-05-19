@@ -1,5 +1,6 @@
 # RLMSAD: Reinforcement Learning-Based Model Selection for Anomaly Detection
-This is the implementation for Reinforcement Learning-Based Model Selection for Anomaly Detection (RLMSAD).
+This is the implementation for Reinforcement Learning-Based Model Selection for Anomaly Detection (RLMSAD). 
+Paper title: Time Series Anomaly Detection via Reinforcement Learning-Based Model Selection
 
 ## Requirements
  * python 3.7.11
