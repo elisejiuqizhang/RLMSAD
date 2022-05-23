@@ -80,7 +80,7 @@ Run the following scripts for evaluating the base models.
 
 In case you would like to explore the performance of a simple emsemble learning scheme. I also provide the script for majority voting:
 
-``` $ python base_detectors/run_majority+vote.py```
+``` $ python base_detectors/run_majority_vote.py```
 
 ### 3. Run RL Model Selector
 
