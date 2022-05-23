@@ -78,9 +78,7 @@ Run the following scripts for evaluating the base models.
  You can vary the model threshold by changing the contamination rate ```contamination``` in function ```raw_thredholds(raw_scores, contamination)``` to tune the base model performance. 
  
 
-In case you would like to explore the performance of a simple emsemble learning scheme. I also provide the script for majority voting:
 
-``` $ python base_detectors/run_majority_vote.py```
 
 ### 3. Run RL Model Selector
 
